@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e7a5bc0-fc18-4dec-8c23-f836739f39b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Boss.py3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/level1/Boss.py3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/level2/Boss.py3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/statement_en.html" beforeDir="false" afterPath="$PROJECT_DIR$/config/statement_en.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/statement_fr.html" beforeDir="false" afterPath="$PROJECT_DIR$/config/statement_fr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/stub.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config/stub.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingame/game/Referee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingame/game/Referee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/PlayerUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/PlayerUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/UnitUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/UnitUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Viewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/assets/b.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/assets/b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/assets/w.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/assets/w.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Agent1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Agent1.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Cell.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codingame/game/Referee.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Action.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Board.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Viewer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codingame/game/gota/UnitUI.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/Agent2.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/stub.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codingame/game/Player.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1oP24vreA43IjvFNEkVA4JSLbsU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="linesofaction" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e7a5bc0-fc18-4dec-8c23-f836739f39b2" name="Default Changelist" comment="" />
+      <created>1613173718504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613173718504</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Board.java</url>
+          <line>150</line>
+          <properties class="com.codingame.game.gota.Board" method="getLegalActions">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Board.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Board.java</url>
+          <line>168</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/codingame/game/gota/Board.java</url>
+          <line>159</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/codingame/gameengine/module-entities/3.15.6/module-entities-3.15.6.jar!/com/codingame/gameengine/module/entities/Rectangle.class</url>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/clobber$Main.ic" NAME="Main Coverage Results" MODIFIED="1613339664990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
