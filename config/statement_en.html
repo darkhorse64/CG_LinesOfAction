@@ -18,23 +18,23 @@
           <span>Rules</span>
       </h1>
       <div class="statement-rules-content">
-          <p>The game is played on a 8x8 board. There are two players: White (light color) and Black (dark color). Each player has 12 checkers.</p>
+          <p>The game is played on a 8x8 board with two players. Each player has 12 checkers.</p>
           <p>The initial position of checkers is shown in the following picture:</p>
-          <p style="text-align: center;"><img src=https://github.com/darkhorse64/CG_LinesOfAction/raw/master/config/board.png" alt="Img: LOA initial position" style="height: 350px; width: auto;"></img></p>
-          <p>The goal of the game is to bring all of your own checkers together into a connected group. Checkers can be connected vertically, horizontally or diagonally.</p>
+          <p style="text-align: center;"><img src=https://github.com/darkhorse64/CG_LinesOfAction/raw/main/config/board.png" alt="Img: LOA initial position" style="height: 350px; width: auto;"></img></p>
+          <p>The goal of the game is to bring all of your own checkers together into a single connected group. Checkers can be connected vertically, horizontally or diagonally.</p>
           <strong>How to play: </strong>
           <p></p>
           <p>Black starts the game. Checkers move horizontally, vertically, or diagonally.</p>
           <ul>
               <li>A checker moves exactly as many spaces as there are checkers (both friendly and opponent) on the line in which it is moving.</li>
-              <li>A checker may not jump over an opponent stone.</li>
-              <li>A checker may jump over friendly stones.</li>
-              <li>A checker may land on a square occupied by an opponent checker, resulting in the latter's capture and removal from the game.</li>
+              <li>A checker may not jump over an opponent checker.</li>
+              <li>A checker may jump over friendly checkers.</li>
+              <li>A checker may land on an empty square or a square occupied by an opponent checker, resulting in the latter's capture and removal from the game.</li>
           </ul>
-          <p>The game ends when one player has connected all his checkers or when <const>200</const> moves have been performed without victory from any player. In that case, the game is a draw</p>
+          <p>The game ends when one player has connected all his checkers or when <const>150</const> moves have been performed without victory from any player. In that case, the game is a draw.</p>
           <strong>Ending a turn: </strong>
           <ul>
-            <li>A bot must output the coordinates of the piece he wants to move followed by its destination coordinates. Coordinates are expressed in chess notation e.g. "e2e3"</li>
+            <li>A bot must output the coordinates of the piece he wants to move followed by its destination coordinates. Coordinates are expressed in chess notation e.g. "<const>e2e3</const>"</li>
           </ul>
           <strong>Wrong output: </strong><br>
           <ul>
@@ -54,7 +54,8 @@
       <span>Expert Rules</span>
     </h1>
     <div class="statement-expert-rules-content">
-      If your last move connects simultaneously your checkers and the opponent checkers, it is considered as a win for you.
+      <li>If your last move connects simultaneously your checkers and the opponent checkers, it is considered as a win for you.</li>
+      <li>In very rare occurences, a player will not have any legal moves left. This is not considered as a losing position for the player and he must issue a "<const>pass</const>" move to continue the game.</li>
     </div>
   </div>
   
@@ -106,20 +107,23 @@
         <span class="statement-lineno">First <const>8</const> lines</span>: <var>line</var>: a string of characters representing one horizontal row of the grid, top to bottom. (<const>.</const>: empty, <const>w</const>: white, <const>b</const>: black).
         <br>
         <span class="statement-lineno">Next line: <var>lastMove</var></span>: the last move by the opponent ("<const>null</const>" if it's the first turn).
+        </br>
         <br>
          <span class="statement-lineno">Next line: <var>moveCount</var></span>: the number of legal moves for this turn.
+        </br>
         <br>
           <span class="statement-lineno">Next <var>moveCount</var> lines</span>: <var>move</var>: a string of characters representing a legal move.
-          <br>      </div>
+        </br>      
+          </div>
     </div>
 
     <!-- Protocol block -->
     <div class="blk">
       <div class="title">Output</div>
       <div class="text">
-         <span class="statement-lineno">A single line</span> containing the coordinates where you want to move from, to, e.g. "<const>e2e3</const>".<br>
+         <span class="statement-lineno">A single line</span> containing the coordinates where you want to move from, to, e.g. "<const>e2e3</const>" or "<const>pass</const>" only if you have no legal moves left.<br>
           <ul>
-              <li>You can display a (short) comment in the viewer by adding a space after the move and writing its content, e.g. "<const>e2e3 message<const>".</li>
+              <li>You can display a (short) comment in the viewer by adding a space after the move and writing its content, e.g. "<const>e2e3 message</const>".</li>
               <li>You can play a random move by outputting "<const>random</const>" instead of a move. This is admittedly only useful for stub code generation.</li>
           </ul>
         <br>

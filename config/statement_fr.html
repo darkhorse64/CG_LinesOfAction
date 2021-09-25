@@ -1,0 +1,141 @@
+<div id="statement_back" class="statement_back" style="display:none"></div>
+  <div class="statement-body">
+    <!-- GOAL -->
+    <div class="statement-section statement-goal">
+      <h1>
+        <span class="icon icon-goal">&nbsp;</span>
+        <span>Présentation du jeu</span>
+      </h1>
+      <div class="statement-goal-content">
+        <p>Ce jeu est une implémentation du jeu de plateau <a href="https://fr.wikipedia.org/wiki/Lines_of_Action">Lines Of Action</a>.</p>
+        <p>Le code source est accessible <a href="https://github.com/darkhorse64/CG_LinesOfAction">ici</a>.</p>
+      </div>
+    </div>
+    <!-- RULES -->
+    <div class="statement-section statement-rules">
+      <h1>
+          <span class="icon icon-rules">&nbsp;</span>
+          <span>Règles</span>
+      </h1>
+      <div class="statement-rules-content">
+          <p>Le jeu se déroule sur un échiquier de 8x8 cases avec deux joueurs. Chaque joueur dispose de douze pions. La position initiale des pions est illustrée dans l'image suivante</p>
+          <p style="text-align: center;"><img src=https://github.com/darkhorse64/CG_LinesOfAction/raw/main/config/board.png" alt="Img: LOA initial position" style="height: 350px; width: auto;"></img></p>
+          <p>Le but du jeu est de connecter tous vos pions ensemble. Les pions peuvent être connectés verticalement, horizontalement ou diagonalement.</p>
+          <strong>Comment jouer: </strong>
+          <p></p>
+          Les Noirs commencent la partie. Les pions se déplacent horizontalement, verticalement ou en diagonale.
+          <ul>
+              <li>Un pion se déplace exactement d'autant de cases qu'il y a de pions (les siens ou ceux de l'adversaire) sur sa ligne de déplacement.</li>
+              <li>Un pion ne peut pas sauter par dessus un pion de l'adversaire.</li>
+              <li>Un pion peut sauter par dessus ses propres pions.</li>
+              <li>Un pion atterrit soit sur une case vide soit sur un case occupée par un pion adverse. Dans ce cas, le pion adverse est capturé et retiré du jeu.</li>
+          </ul>
+          <p>La partie se termine quand un joueur a connecté tous ses pions ou si <const>150</const> coups ont été joués sans parvenir à un résultat décisif.</p> 
+          <strong>Fin d'un tour de jeu: </strong>
+          <ul>
+            <li>Le robot doit communiquer les coordonnées du pion qu'il a choisi suivi des coordonnées de sa destination. Les coordonnées sont exprimées en notation échiquéenne, par exemple "<const>e2e3</const>".</li>
+          </ul>
+          <strong>En cas de coup erroné d'un joueur: </strong><br>
+          <ul>
+              <li>Si les positions de départ ou d'arrivée sont en dehors du plateau,</li>
+              <li>Si la case de départ est occupée par un pion adverse,</li>
+              <li>Si la case d'arrivée est occupée par un de ses propres pions,</li>
+              <li>Si un pion adverse se trouve entre les cases de départ et d'arrivée du pion,</li>
+          </ul>
+          <p>la partie se termine et le joueur perd.</p>
+    </div>
+  </div>
+
+  <!-- EXPERT RULES -->
+  <div class="statement-section statement-expertrules">
+    <h1>
+      <span class="icon icon-expertrules">&nbsp;</span>
+      <span>Règles pour les experts</span>
+    </h1>
+    <div class="statement-expert-rules-content">
+      <li>Si votre dernier coup connecte simultanément vos pions et les pions adverses, vous remportez la victoire.</li>
+      <li>Dans de très rares cas, un joueur n'a plus aucun coup jouable. Ce n'est pas considéré comme une défaite et le joueur émet "<const>pass</const>" pour passer son tour et continuer la partie.</li>
+    </div>
+  </div>
+  
+  <!-- Victory conditions -->
+  <div class="statement-victory-conditions">
+      <div class="icon victory"></div>
+      <div class="blk">
+          <div class="title">Conditions de victoire</div>
+          <div class="text">
+              <ul style="padding-bottom: 0;">
+                  <li>Connecter en premier ses pions.</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <!-- Lose conditions -->
+  <div class="statement-lose-conditions">
+      <div class="icon lose"></div>
+      <div class="blk">
+          <div class="title">Conditions de défaite</div>
+          <div class="text">
+              <ul style="padding-bottom: 0;">
+                  <li>Ne pas connecter ses pions avant ceux de l'adversaire.</li>
+                  <li>Ne pas répondre dans le temps imparti ou envoyer une sortie erronée.</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <!-- PROTOCOL -->
+  <div class="statement-section statement-protocol">
+      <h1>
+      <span class="icon icon-protocol">&nbsp;</span>
+      <span>Entrées/sorties du jeu</span>
+  </h1>
+
+    <!-- Protocol block -->
+    <div class="blk">
+      <div class="title">Entrées initiales</div>
+      <div class="text">
+          <span class="statement-lineno">Une ligne: <var>color</var></span>: la couleur de vos pions (<const>w</const>: blancs, <const>b</const>:noirs).
+      </div>
+    </div>
+
+    <div class="blk">
+      <div class="title">Entrées pour chaque tour de jeu</div>
+      <div class="text">
+        <span class="statement-lineno"><var>8</var> premières lignes</span>: <var>line</var>: une chaîne de caractères représentant une ligne du plateau, de haut en bas. (<const>.</const>: vide, <const>w</const>: pion blanc, <const>b</const>: pion noir).
+        <br>
+        <span class="statement-lineno">Ligne suivante</span>: <var>lastAction</var>: le dernier coup joué par l'adversaire ("<const>null</const>" si c'est le premier tour).
+        </br>
+        <br>
+         <span class="statement-lineno">Ligne suivante</span>: <var>moveCount</var>: le nombre de coups légaux pour ce tour.
+        </br>
+        <br>
+          <span class="statement-lineno"><var>moveCount</var> lignes suivantes</span>: <var>move</var>: une chaîne de caractères représentant un coup légal.
+        </br>      
+      </div>
+    </div>
+
+    <!-- Protocol block -->
+    <div class="blk">
+      <div class="title">Sorties</div>
+      <div class="text">
+         <span class="statement-lineno">Une seule ligne</span> contenant les coordonnées de départ et d'arrivée du pion joué, par exemple "<const>e2e3</const>" or "<const>pass</const>" seulement si vous n'avez aucun coup disponible.<br>
+          <ul>
+              <li>Vous pouvez afficher un (court) message dans le cartouche de votre joueur en ajoutant un espace après le coup suivi du texte de votre message, par exemple "<const>e2e3 message</const>".</li>
+              <li>Vous pouvez jouer un coup aléatoirement en écrivant "<const>random</const>" à la place de votre coup. Ca n'a vraiment d'utilité que pour créer facilement un robot fonctionnel à l'aide du générateur de code.</li>
+          </ul>
+        <br>
+      </div>
+    </div>
+
+    <!-- Protocol block -->
+    <div class="blk">
+      <div class="title">Contraintes</div>
+        Le temps de réponse au premier tour est ≤
+        <const>1000</const> ms.
+        <br>Le temps de réponse pour les tours suivants est ≤
+        <const>150</const> ms.
+      </div>
+  </div>
+</div>

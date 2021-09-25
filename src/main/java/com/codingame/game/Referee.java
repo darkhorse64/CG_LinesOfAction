@@ -36,9 +36,9 @@ public class Referee extends AbstractReferee {
         rand = new Random(gameManager.getSeed());
         board = new Board(boardSize, gameManager.getSeed());
         viewer = new Viewer(graphics, board, gameManager, toggleModule);
-        gameManager.setMaxTurns(200);
+        gameManager.setMaxTurns(150);
         gameManager.setFirstTurnMaxTime(1000);
-        gameManager.setTurnMaxTime(100);
+        gameManager.setTurnMaxTime(150);
         gameManager.setFrameDuration(1800);
         lastAction = "null";
         currentPlayer = gameManager.getPlayer(0);
@@ -74,7 +74,11 @@ public class Referee extends AbstractReferee {
 
             boolean found = false;
 
-            if(output.equals("random")) {
+            if (actions.isEmpty() && (output.equals("pass") || output.equals("random"))) {
+                found = true;
+                lastAction = "pass";
+
+            } else if (output.equals("random")) {
                 found = true;
                 int a = rand.nextInt(actions.size());
 
@@ -154,10 +158,16 @@ public class Referee extends AbstractReferee {
         player.sendInputLine(lastAction);
         // Number of actions
         ArrayList<Action> actions = board.getLegalActions(player.getIndex());
-        actions.sort(Comparator.comparing( Action::toString ));
-        player.sendInputLine(Integer.toString(actions.size()));
-        for (Action action:actions)
-            player.sendInputLine(action.toString());
+        if (actions.isEmpty()) {
+            player.sendInputLine("1");
+            player.sendInputLine("pass");
+
+        } else {
+            actions.sort(Comparator.comparing(Action::toString));
+            player.sendInputLine(Integer.toString(actions.size()));
+            for (Action action : actions)
+                player.sendInputLine(action.toString());
+        }
     }
 
     @Override
